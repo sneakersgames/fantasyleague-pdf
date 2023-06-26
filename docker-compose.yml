@@ -21,7 +21,10 @@ services:
       - 9000:80
     networks:
       - app-network
+      - nginx-proxy-manager_default
 
 networks:
   app-network:
-    driver: bridge
+    # driver: bridge
+  nginx-proxy-manager_default:
+    external: true
