@@ -5,7 +5,7 @@ services:
     ports:
       - "8888:80"
     volumes:
-      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - /root/default.conf:/etc/nginx/conf.d/default.conf
       - .:/var/www/html
     links:
       - php
