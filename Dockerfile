@@ -23,11 +23,6 @@ WORKDIR /var/www/html
 # Copy the application files to the container
 COPY . /var/www/html
 
-# Ensure the file in the root is accessible by the Docker user
-COPY default.conf /root/default.conf
-RUN chown www-data:www-data /root/default.conf
-RUN chmod 755 /root/default.conf
-
 # Install PHP dependencies
 RUN composer install
 
